@@ -18,6 +18,7 @@ public class GameInterface extends JFrame{
 	private JButton botaoPapel;
 	private JButton botaoTesoura;
 	private static JLabel resultado;
+	private static JLabel jogadaOponente;
 	
 	public GameInterface() {
 		//configuracoes basicas da tela
@@ -34,14 +35,15 @@ public class GameInterface extends JFrame{
         botaoPedra = new JButton();
         botaoPapel = new JButton();
         botaoTesoura = new JButton();
-        resultado = new JLabel();
         botaoPedra.setText("Pedra");
         botaoPapel.setText("Papel");
         botaoTesoura.setText("Tesoura");
         
-        //label para exibir o resultado
+        //labels
         resultado = new JLabel("Escolha sua jogada");
         resultado.setFont(new Font("Arial", Font.PLAIN, 20));
+        jogadaOponente = new JLabel();
+        jogadaOponente.setFont(new Font("Arial", Font.PLAIN, 20));
         //Layout
 		setLayout(null);
 		
@@ -49,12 +51,14 @@ public class GameInterface extends JFrame{
 		botaoPedra.setBounds(50, 50, 100, 70);
 		botaoPapel.setBounds(200, 50, 100, 70);
 		botaoTesoura.setBounds(350, 50, 100, 70);
-		resultado.setBounds(150, 180, 200, 50);
+		resultado.setBounds(150, 190, 200, 50);
+		jogadaOponente.setBounds(110, 140, 310, 50);
 		//adiciona os componentes na tela
 		add(botaoPedra);
 		add(botaoPapel);
 		add(botaoTesoura);
 		add(resultado);
+		add(jogadaOponente);
 		
 		botaoPedra.addActionListener(event -> {
 			
@@ -76,23 +80,29 @@ public class GameInterface extends JFrame{
 		
 	}
 	
-	public static void setResultado(String result) {
+	public static void setResultado(String result, String op, Jogada j) {
 		
 		resultado.setText(result);
 		
+		if(op == "emp") {
+			jogadaOponente.setText("Jogada do oponente: " + j);
+		}else {
+			jogadaOponente.setText(op);
+		}
+		
 		if(result.equals("Empate.")) {
 			
-			resultado.setBounds(210, 180, 200, 50);
+			resultado.setBounds(210, 190, 200, 50);
 			resultado.setForeground(new Color(250, 0 ,250));
 			
 		}else if(result.equals("Voce venceu!")) {
 			
-			resultado.setBounds(180, 180, 200, 50);
+			resultado.setBounds(180, 190, 200, 50);
 			resultado.setForeground(new Color(0, 250 ,0));
 			
 		}else if(result.equals("Oponente venceu!")){
 			
-			resultado.setBounds(165, 180, 200, 50);
+			resultado.setBounds(160, 190, 200, 50);
 			resultado.setForeground(new Color(250, 0 ,0));
 		}
 		
