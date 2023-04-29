@@ -23,10 +23,8 @@ public class verificarJogadas {
 		
 		if(player == Jogada.PEDRA && opponent == 2) {
 			
-			System.out.println("Opponent Wins!");
-			GameInterface.setResultado("Oponente venceu.");
+			GameInterface.setResultado("Oponente venceu!");
 			
-		
 		}else if(player == Jogada.PEDRA && opponent == 3) {
 			
 			GameInterface.setResultado("Voce venceu!");
@@ -37,11 +35,11 @@ public class verificarJogadas {
 		
 		}else if(player == Jogada.PAPEL && opponent == 3) {
 			
-			GameInterface.setResultado("Oponente venceu.");
+			GameInterface.setResultado("Oponente venceu!");
 			
 		}else if(player == Jogada.TESOURA && opponent == 1) {
 			
-			GameInterface.setResultado("Oponente venceu.");
+			GameInterface.setResultado("Oponente venceu!");
 			
 		}else if(player == Jogada.TESOURA && opponent == 2) {
 			

@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JButton;
@@ -82,14 +83,17 @@ public class GameInterface extends JFrame{
 		if(result.equals("Empate.")) {
 			
 			resultado.setBounds(210, 180, 200, 50);
+			resultado.setForeground(new Color(250, 0 ,250));
 			
 		}else if(result.equals("Voce venceu!")) {
 			
 			resultado.setBounds(180, 180, 200, 50);
-		}else if(result.equals("Oponente venceu.")){
+			resultado.setForeground(new Color(0, 250 ,0));
+			
+		}else if(result.equals("Oponente venceu!")){
 			
 			resultado.setBounds(165, 180, 200, 50);
-			
+			resultado.setForeground(new Color(250, 0 ,0));
 		}
 		
 	}
