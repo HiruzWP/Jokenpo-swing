@@ -18,7 +18,7 @@
 
 <h2>O jogo:</h2>
 
-**•Jokenpo é um jogo simples em que cada jogador escolhe entre pedra, papel ou tesoura.**
+**•É um jogo simples em que o jogador escolhe entre pedra, papel ou tesoura.**
 
 **•Sendo Pedra > Tesoura > Papel > Pedra.**
 
