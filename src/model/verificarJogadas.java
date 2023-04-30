@@ -15,7 +15,7 @@ public class verificarJogadas {
 	public static void adicionarPlay(Jogada jogada) {
 
 		verificarVencedor(jogada, gerarJogada());
-
+		//
 	}
 	
 	private static void verificarVencedor(Jogada player, int opponent) {
